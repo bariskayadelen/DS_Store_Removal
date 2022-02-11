@@ -14,7 +14,6 @@ In this article, I am explaining how to remove .DS_Store files from your git rep
 
 If you have .DS_Store files in your folder, then copy and paste this commands to remove the file from current directory:
 
-```markdown
 git rm --cached .DS_Store
 
 git add .
@@ -22,13 +21,11 @@ git add .
 git commit -m "Remove .DS_Store from current directory"
 
 git push origin master
-```
 
 ### Remove .DS_Store files from all over project?
 
 If you have .DS_Store files all over your project, then copy and paste this commands to find and remove all of the files from the repository:
 
-```markdown
 find . -name .DS_Store -print0 | xargs -0 git gm --ignore-unmatch
 
 git add .
@@ -36,18 +33,13 @@ git add .
 git commit -m "Remove .DS_Store from everywhere"
 
 git push origin master
-```
 
 ## How to always ignore .DS_Store files?
 
 Let’s make a global .gitignore file:
 
-```markdown
 echo .DS_Store >> ~/.gitignore_global
-```
 
 And let git know that you want to use this file for all of your repositories:
 
-```markdown
 git config --global core.excludesfile ~/.gitignore_global
-```
