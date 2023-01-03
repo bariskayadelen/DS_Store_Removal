@@ -29,7 +29,7 @@ git push origin master
 If you have .DS_Store files all over your project, then copy and paste this commands to find and remove all of the files from the repository:
 
 ```markdown
-find . -name .DS_Store -print0 | xargs -0 git gm --ignore-unmatch
+find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch
 
 git add .
 
